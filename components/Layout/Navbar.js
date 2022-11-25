@@ -4,12 +4,12 @@ import React from 'react'
 function Navbar() {
   return (
     <div className=' bg-[#1A1A1A] text-white AbrilFatface_font text-sm'>
-        <ul className='flex justify-around h-[32px]'>
-            <div className='flex items-center gap-14'>
+        <ul className='md:flex justify-around md:h-[32px] h-[60px]'>
+            <div className='flex items-center justify-center md:gap-14 gap-6'>
             <li><Link href="/">HOME</Link></li>
             <li><Link href="/Candidate">CANDIDATES</Link></li>
             </div>
-            <div className='flex gap-14 items-center'>
+            <div className='flex md:gap-14 gap-4 items-center justify-center md:mt-0 mt-2'>
             <li><Link href="/Interactive">INTERACTIVE</Link></li>
             <li><Link href="/About">ABOUT</Link></li>
             <li><Link href="/Blog">BLOG</Link></li>
