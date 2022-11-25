@@ -3,11 +3,11 @@ import React from 'react'
 function index() {
   return (
     <>
- <div className="mx-16">
-      <h2 className="text-[96px] AllertaStencil_font text-center mb-8">
+ <div className="xl:mx-16 lg:mx-8">
+      <h2 className="lg:text-[96px] md:text-[70px] text-[40px] AllertaStencil_font text-center mb-8">
         INFO - VAP
       </h2>
-      <div className="Actor_font flex flex-col gap-8 text-2xl">
+      <div className="Actor_font flex flex-col gap-8 text-2xl text-justify">
         <p>
           A stone hand-picked from the river Thames and brought to Flat 8. Fresh
           handmade pizzas can be made on this stone provided the oven

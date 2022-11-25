@@ -3,32 +3,32 @@ import React from "react";
 function Footer() {
   return (
     <div className="my-6 px-8 z-20 ">
-      <div className="flex justify-between border-b">
-        <h2 className="LeckerliOne_font text-[78px]">
+      <div className="md:flex justify-between border-b">
+        <h2 className="LeckerliOne_font xl:text-[78px] text-[50px] flex md:justify-start justify-center">
           <span className="text-[#1D8346]">I</span>
           <span className="text-[#354253]">Vap</span>
         </h2>
-        <div className="flex my-auto">
-          <ul className="flex gap-24 my-auto text-[20px]">
+        <div className="flex my-auto md:mx-0 mx-auto md:justify-end justify-center">
+          <ul className="flex md:gap-24 gap-8 my-auto text-[20px]">
             <li className="Allura_font text-[#1D8346]">Home</li>
-            <div className="AkayaKanadaka_font flex gap-24">
+            <div className="AkayaKanadaka_font flex md:gap-24 gap-8">
               <li>About</li>
               <li>Contact</li>
             </div>
           </ul>
         </div>
       </div>
-      <div className="flex justify-between mt-10 ">
-        <h2 className="Cabin_font text-sm ">
+      <div className="md:flex justify-between xl:mt-10 mt-4 ">
+        <h2 className="Cabin_font text-sm flex items-end ">
           @ All right reserved 2022 Design By Rotich Jacob
         </h2>
 
-        <div className="flex gap-10">
+        <div className="flex md:gap-10 gap-4 md:mt-0 mt-6">
           <p className="AkayaKanadaka_font flex my-auto"> FOLLOW US</p>
-          <img src="/images/googleDrive.svg" />
-          <img src="/images/instagram.svg" />
-          <img src="/images/instagram.svg" />
-          <img src="/images/facebook.svg" />
+          <img className="w-8" src="/images/googleDrive.svg" />
+          <img className="w-8" src="/images/Instagram.svg" />
+          <img className="w-8" src="/images/Instagram.svg" />
+          <img className="w-8" src="/images/Facebook.svg" />
         </div>
       </div>
     </div>

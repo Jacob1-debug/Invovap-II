@@ -2,7 +2,7 @@ import React from 'react'
 import ElectoralLaw from '../Sidebar/ElectoralLaw'
 function AccountSidebar() {
   return (
-    <div className='flex flex-col gap-44'>
+    <div className='flex flex-col md:gap-44 gap-8'>
           <div className="  ">
           <ElectoralLaw />
           </div>
@@ -13,7 +13,7 @@ function AccountSidebar() {
                 <div className="flex my-auto">
                   <img src="/images/alert-triangle.svg" />
                 </div>
-                <h2 className="flex my-auto w-[80%] font-in">
+                <h2 className="flex my-auto w-[80%] ">
                   Opinion Polls are Open! Please go to the vote tab to vote!
                 </h2>
               </div>

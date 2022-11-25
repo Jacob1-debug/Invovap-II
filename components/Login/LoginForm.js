@@ -17,52 +17,52 @@ function LoginForm() {
   ];
   return (
     <div>
-      <form class="w-full max-w-xl">
-        <div class="md:flex md:items-center mb-6">
-          <div class="md:w-1/3">
+      <form className="w-full max-w-xl">
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
             <label
-              class="AbrilFatface_font text-[#676767] text-[18px]"
+              className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-date"
             >
               DATE OF BIRTH
             </label>
           </div>
-          <div class="md:w-2/3 Actor_font">
+          <div className="md:w-2/3 Actor_font">
             <input
-              class="bg-white rounded focus:outline-none w-full p-2 py-3 "
+              className="bg-white rounded focus:outline-none w-full p-2 py-3 "
               id="inline-date"
               type="date"
             />
           </div>
         </div>
 
-        <div class="md:flex md:items-center mb-6">
-          <div class="md:w-1/3">
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
             <label
-              class="AbrilFatface_font text-[#676767] text-[18px]"
+              className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-contact"
             >
               CONTACT
             </label>
           </div>
-          <div class="md:w-2/3 Actor_font">
+          <div className="md:w-2/3 Actor_font">
             <input
-              class="bg-white rounded focus:outline-none w-full p-2 py-3 "
+              className="bg-white rounded focus:outline-none w-full p-2 py-3 "
               id="inline-contact"
               type="text"
             />
           </div>
         </div>
-        <div class="md:flex md:items-center mb-6">
-          <div class="md:w-1/3">
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
             <label
-              class="AbrilFatface_font text-[#676767] text-[18px]"
+              className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-password"
             >
               DISTRICT OF VOTE REGISTRATION
             </label>
           </div>
-          <div class="md:w-2/3 Actor_font">
+          <div className="md:w-2/3 Actor_font">
             <div className="flex justify-between gap-4 ">
               <div className=" w-full ">
                 <div className="relative  text-[#333333]">
@@ -104,29 +104,29 @@ function LoginForm() {
             </div>
           </div>
         </div>
-        <div class="md:flex md:items-center mb-6">
-          <div class="md:w-1/3">
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
             <label
-              class="AbrilFatface_font text-[#676767] text-[18px]"
+              className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="Vote"
             >
-              Password
+              PASSWORD
             </label>
           </div>
-          <div class="md:w-2/3 Actor_font">
+          <div className="md:w-2/3 Actor_font">
             <input
-              class="bg-white rounded focus:outline-none w-full p-2 py-3 "
+              className="bg-white rounded focus:outline-none w-full p-2 py-3 "
               id="Vote"
               type="text"
             />
           </div>
         </div>
 
-        <div class="md:flex md:items-center">
-          <div class="md:w-1/3"></div>
-          <div class="md:w-2/3 Actor_font">
+        <div className="md:flex md:items-center">
+          <div className="md:w-1/3"></div>
+          <div className="md:w-2/3 Actor_font">
             <button
-              class="w-[255px] h-[70px] text-center rounded-lg bg-white 
+              className="lg:w-[255px] w-[200px] flex md:mx-0 mx-auto justify-center items-center h-[70px] text-center rounded-lg bg-white 
               AkayaKanadaka_font text-[26px]"
               type="button"
             >

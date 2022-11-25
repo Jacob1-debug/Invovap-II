@@ -3,11 +3,11 @@ import LoginForm from "../../components/Login/LoginForm";
 function index() { 
   return (
     <>
-      <div className="flex justify-between w-full my-16">
-   <div className="w-30%">
+      <div className="md:flex justify-between w-full md:my-16">
+   <div className="lg:w-30%">
     <AccountSidebar/>
    </div>
-        <div className="w-[70%] border-l pt-16 p-4 px-16">
+        <div className="md:w-[70%] w-full md:border-l md:pt-16 pt-8 p-4 lg:px-16">
        <LoginForm/>
         </div>
       </div>

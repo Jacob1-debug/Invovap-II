@@ -3,11 +3,11 @@ import RegisterForm from "../../components/Register/RegisterForm";
 function index() { 
   return (
     <>
-      <div className="flex justify-between w-full my-16">
-   <div className="w-30%">
+      <div className="md:flex justify-between w-full md:my-16 my-8">
+   <div className="md:w-30% w-full">
     <AccountSidebar/>
    </div>
-        <div className="w-[70%] border-l pt-16 p-4 px-16">
+        <div className="md:w-[70%] w-full border-l pt-16 p-4 lg:px-16">
      <RegisterForm/>
         </div>
       </div>

@@ -6,7 +6,7 @@ function index() {
   
   return (
     <div className="xl:mx-16 lg:mx-12">
-      <h2 className="xl:text-[96px] lg:text-[70px] AllertaStencil_font text-center mb-8">
+      <h2 className="xl:text-[96px] md:text-[70px] text-[40px] AllertaStencil_font text-center mb-8">
         <TypeAnimation
       sequence={[
         'INFO - VAP', // Types 'One'
