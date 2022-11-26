@@ -2,7 +2,7 @@ import React from "react";
 
 function OpinionPolls() {
   return (
-    <div className="h-screen xl:mt-24 mt-16 fixed ">
+    <div className="h-screen xl:mt-8 mt-16 fixed ">
       <div className="h-20 rounded-full bg-[#D9D9D9] xl:w-[316px] lg:w-[220px] md:w-[190px]  flex xl:px-8 px-4 mx-auto">
         <div className="flex justify-between">
           <div className="flex my-auto">

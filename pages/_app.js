@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps, props }) {
         <div
           className={`${
             ChangeBg == false ? " bg-[#f3f2f2da] " : "bg-[#CBEDEA]"
-          }  md:w-[15%] xl:mt-36 md:mt-16 mt-[10%]  `}
+          }  md:w-[15%] md:mt-16 mt-[14%]  `}
         >
           <div className="">
             <div
