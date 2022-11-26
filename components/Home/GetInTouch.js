@@ -14,33 +14,33 @@ function GetInTouch() {
           />
         </div>
         <div className="lg:w-4/6 w-full ">
-          <form class="w-full AkayaKanadaka_font text-lg bg-white p-4">
-            <div class="flex items-center border-b border-teal-500 py-6">
+          <form className="w-full AkayaKanadaka_font text-lg bg-white p-4">
+            <div className="flex items-center border-b border-teal-500 py-6">
               <input
-                class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Name"
                 aria-label="Full name"
               />
             </div>
-            <div class="flex items-center border-b border-teal-500 py-6">
+            <div className="flex items-center border-b border-teal-500 py-6">
               <input
-                class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Email"
                 aria-label="Full name"
               />
             </div>
-            <div class="flex items-center border-b border-teal-500 py-6 ">
+            <div className="flex items-center border-b border-teal-500 py-6 ">
               <textarea
-                class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 pb-6 px-2 leading-tight focus:outline-none"
+                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 pb-6 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Message"
                 aria-label="Full name"
               />
             </div>
             <button
-              class=" my-6 mb-4 w-[139px] h-[54px] bg-[#1D8346]  rounded-lg Cabin_font text-white"
+              className=" my-6 mb-4 w-[139px] h-[54px] bg-[#1D8346]  rounded-lg Cabin_font text-white"
               type="button"
             >
               SEND

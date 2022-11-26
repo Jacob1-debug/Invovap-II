@@ -3,30 +3,130 @@ import Script from "next/script";
 import Header from "../components/Layout/Header";
 import OpinionPolls from "../components/Sidebar/OpinionPolls";
 import ElectoralLaw from "../components/Sidebar/ElectoralLaw";
-import Login from "../pages/Login"
+import Login from "../pages/Login";
 import Footer from "../components/Layout/Footer";
-function MyApp({ Component, pageProps }) {
+import { useState } from "react";
+
+function MyApp({ Component, pageProps, props }) {
+  const [Sidebar, setSidebar] = useState(false);
+  const [ChangeBg, setChangeBg] = useState(false);
+  const [IncreaseText, setIncreaseText] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
   return (
-    <>
+    <div
+      className={` ${ChangeBg == false ? "bg-[#F5F5F5]" : "bg-[#CBEDEA] "}
+      } || ${IncreaseText == true ? "font-extrabold" : "font-thin"} `}
+    >
       <Script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></Script>
       <Header />
-    {/* <Login/> */}
+      {/* <Login/> */}
+
       <div className="flex justify-between ">
-        <div className="md:w-[15%] xl:mt-36 md:mt-16 mt-[50%] bg-[#f3f2f2da] ">
-          <ElectoralLaw />
-          <h2 className='AllertaStencil_font xl:text-[32px] lg:text-[24px] my-8 underline fixed mt-36 md:block hidden'>Electoral 
-Law</h2>
+        <div
+          className={`${
+            ChangeBg == false ? " bg-[#f3f2f2da] " : "bg-[#CBEDEA]"
+          }  md:w-[15%] xl:mt-36 md:mt-16 mt-[10%]  `}
+        >
+          <div className="">
+            <div
+              className="fixed flex z-20"
+              onClick={() => {
+                setSidebar(!Sidebar);
+              }}
+            >
+              <div className="bg-white">
+                {Sidebar == false ? null : (
+                  <div className="p-2">
+                    <h2 className="text-[30px] mb-6">Accessibility</h2>
+                    <ul className="flex flex-col gap-4">
+                      <li
+                        className="flex gap-2 cursor-pointer"
+                        onClick={() => {
+                          setIncreaseText(true);
+                        }}
+                      >
+                        <span className="flex my-auto">
+                          <img className="w-4 h-4" src="/images/increase.png" />
+                        </span>
+                        Increase Text
+                      </li>
+                      <li
+                        className="flex gap-2 cursor-pointer"
+                        onClick={() => {
+                          setIncreaseText(false);
+                        }}
+                      >
+                        <span className="flex my-auto">
+                          <img className="w-4 h-4" src="/images/decrease.png" />
+                        </span>
+                        Decrease Text
+                      </li>
+                      <li
+                        className="flex gap-2 cursor-pointer"
+                        onClick={() => {
+                          setChangeBg(true);
+                        }}
+                      >
+                        <span className="flex my-auto">
+                          <img
+                            className="w-4 h-4"
+                            src="/images/grayscale.png"
+                          />
+                        </span>
+                        grayscale
+                      </li>
+                      <li
+                        className="flex gap-2 cursor-pointer"
+                        onClick={() => {
+                          setChangeBg(false), setIncreaseText(false);
+                        }}
+                      >
+                        <span className="flex my-auto">
+                          <img className="w-4 h-4" src="/images/reset.svg" />
+                        </span>
+                        Reset
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+              <img
+                className="bg-white p-4 lg:w-[120px] h-[120px] mt-0 cursor-pointer "
+                src="/images/wheelchair.svg"
+              />
+            </div>
+          </div>
+          <h2 className="AllertaStencil_font xl:text-[32px] lg:text-[24px] my-8 underline fixed mt-36 md:block hidden">
+            Electoral Law
+          </h2>
         </div>
         <div className="md:w-[60%] w-[100%] md:mx-0 mx-2 ">
           {/* For login need to keep the w-[100%] */}
           <Component {...pageProps} />
         </div>
-        <div className=" md:w-[25%]  md:block hidden  bg-[#f3f2f2da] ">
+        <div
+          className="md:hidden block fixed  right-0 z-30 mt-16"
+          onClick={() => {
+            setShowAlert(!showAlert);
+          }}
+        >
+          {showAlert == false ? null : (
+            <div className="fixed right-0 w-[50%]">
+              <OpinionPolls />
+            </div>
+          )}
+          <img className="w-10 z-30" src="/images/alert-triangle.svg" />
+        </div>
+        <div
+          className={` ${
+            ChangeBg == false ? " bg-[#f3f2f2da] " : "bg-[#CBEDEA]"
+          }  md:w-[25%]  md:block hidden  `}
+        >
           <OpinionPolls />
         </div>
       </div>
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
 
