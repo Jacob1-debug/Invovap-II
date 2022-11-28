@@ -12,7 +12,7 @@ function Footer() {
         </h2>
         <div className="flex my-auto md:mx-0 mx-auto md:justify-end justify-center">
           <ul className="flex md:gap-24 gap-8 my-auto text-[20px]">
-          <div className="AkayaKanadaka_font flex md:gap-24 gap-8">
+          <div className="AkayaKanadaka_font flex md:gap-24 gap-8 cursor-pointer">
           <Link href="/">
             <div
               className={`active ${
@@ -23,16 +23,18 @@ function Footer() {
             </div>
           </Link>
             </div>
-            <div className="AkayaKanadaka_font flex md:gap-24 gap-8">
+           
             <Link href="/About">
             <div
-              className={`active ${
+              className={`active AkayaKanadaka_font ${
                 router.asPath === "/About" && "Allura_font text-[#1D8346]"
               } `}
             >
               <span>About</span>
             </div>
           </Link>
+         
+          <div className="AkayaKanadaka_font flex md:gap-24 gap-8 cursor-pointer">
           <Link href="/Contact">
             <div
               className={`active ${
@@ -51,7 +53,7 @@ function Footer() {
           @ All right reserved 2022 Design By Rotich Jacob
         </h2>
 
-        <div className="flex md:gap-10 gap-4 md:mt-0 mt-6">
+        <div className="flex md:gap-10 justify-between md:mt-0 m-6">
           <p className="AkayaKanadaka_font flex my-auto"> FOLLOW US</p>
           <img className="w-8" src="/images/googleDrive.svg" />
           <img className="w-8" src="/images/Instagram.svg" />

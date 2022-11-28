@@ -40,7 +40,7 @@ function GetInTouch() {
               />
             </div>
             <button
-              className=" my-6 mb-4 w-[139px] h-[54px] bg-[#1D8346]  rounded-lg Cabin_font text-white"
+              className=" my-6 mb-4 flex md:mx-0 mx-auto justify-center items-center w-[139px] h-[54px] bg-[#1D8346]  rounded-lg Cabin_font text-white"
               type="button"
             >
               SEND

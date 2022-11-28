@@ -284,7 +284,7 @@ function RegisterForm() {
             >
               Register Now
             </button>
-            <p className="my-12 text-[20px]">
+            <p className="md:my-12 my-8 text-[20px] md:text-left text-center">
               {" "}
               Or have an account{" "}
               <Link className="text-[#30429F]" href="/Login">

@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps, props }) {
   const [showAlert, setShowAlert] = useState(false);
   return (
     <div
-      className={` ${ChangeBg == false ? "bg-[#F5F5F5]" : "bg-[#CBEDEA] "}
+      className={`  ${ChangeBg == false ? "bg-[#F5F5F5]" : "bg-[#CBEDEA] "}
       } || ${IncreaseText == true ? "font-extrabold" : "font-thin"} `}
     >
       <Script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></Script>
@@ -91,7 +91,7 @@ function MyApp({ Component, pageProps, props }) {
                 )}
               </div>
               <img
-                className="bg-white p-4 lg:w-[120px] h-[120px] mt-0 cursor-pointer "
+                className="bg-white p-4 lg:w-[120px] md:h-[120px] h-[100px] mt-0 cursor-pointer md:opacity-100 bg-opacity-50  "
                 src="/images/wheelchair.svg"
               />
             </div>
@@ -105,7 +105,7 @@ function MyApp({ Component, pageProps, props }) {
           <Component {...pageProps} />
         </div>
         <div
-          className="md:hidden block fixed  right-0 z-30 mt-16"
+          className="md:hidden block fixed  right-0 z-30 mt-8"
           onClick={() => {
             setShowAlert(!showAlert);
           }}
@@ -115,7 +115,14 @@ function MyApp({ Component, pageProps, props }) {
               <OpinionPolls />
             </div>
           )}
-          <img className="w-10 z-30" src="/images/alert-triangle.svg" />
+          {showAlert == false ? (
+            <img
+              className="w-10 z-30 mt-6 m-1"
+              src="/images/alert-triangle.svg"
+            />
+          ) : (
+            <img className="w-8 z-30" src="/images/Alert_close.png" />
+          )}
         </div>
         <div
           className={` ${

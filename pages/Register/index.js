@@ -7,7 +7,7 @@ function index() {
    <div className="md:w-30%">
     <AccountSidebar/>
    </div>
-        <div className="md:w-[70%] w-full border-l pt-16 p-4 lg:px-16">
+        <div className="md:w-[70%] w-full md:border-l md:pt-16 pt-4 p-4 lg:px-16">
      <RegisterForm/>
         </div>
       </div>

@@ -132,7 +132,7 @@ function LoginForm() {
             >
               Log In
             </button>
-            <p className="my-12 text-[20px]"> Or Don’t have an account, <Link className="text-[#30429F]" href="/Register">Sign UP</Link></p>
+            <p className=" text-[20px] md:my-12 my-8"> Or Don’t have an account, <Link className="text-[#30429F]" href="/Register">Sign UP</Link></p>
           </div>
         </div>
       </form>

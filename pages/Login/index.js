@@ -7,7 +7,7 @@ function index() {
    <div className="lg:w-30%">
     <AccountSidebar/>
    </div>
-        <div className="md:w-[70%] w-full md:border-l md:pt-16 pt-8 p-4 lg:px-16">
+        <div className="md:w-[70%] w-full md:border-l md:pt-16 pt-4 p-4 lg:px-16">
        <LoginForm/>
         </div>
       </div>

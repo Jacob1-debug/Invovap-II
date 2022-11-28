@@ -8,7 +8,7 @@ function AccountSidebar() {
           </div>
           <div className="mx-8">
             <p className="AdventPro_font text-[32px] text-center">Account</p>
-            <div className="h-20 rounded-full bg-[#D9D9D9] w-[316px] flex px-8 mx-auto">
+            <div className="h-20 my-4 rounded-full bg-[#D9D9D9] md:w-[316px] flex px-8 mx-auto">
               <div className="flex justify-between">
                 <div className="flex my-auto">
                   <img src="/images/alert-triangle.svg" />

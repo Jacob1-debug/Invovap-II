@@ -22,7 +22,7 @@ function index() {
       
     />
       </h2>
-      <div className="Actor_font flex flex-col gap-8 text-2xl">
+      <div className="Actor_font flex flex-col gap-8 md:text-2xl text-xl text-justify">
         <p>
           A stone hand-picked from the river Thames and brought to Flat 8. Fresh
           handmade pizzas can be made on this stone provided the oven
