@@ -12,39 +12,38 @@ function Footer() {
         </h2>
         <div className="flex my-auto md:mx-0 mx-auto md:justify-end justify-center">
           <ul className="flex md:gap-24 gap-8 my-auto text-[20px]">
-          <div className="AkayaKanadaka_font flex md:gap-24 gap-8 cursor-pointer">
-          <Link href="/">
+         
+          <Link className="AkayaKanadaka_font" href="/">
             <div
-              className={`active ${
+              className={`${
                 router.asPath === "/" && "Allura_font text-[#1D8346]"
               } `}
             >
               <span>Home</span>
             </div>
           </Link>
-            </div>
+      
            
-            <Link href="/About">
+            <Link  className="AkayaKanadaka_font" href="/About">
             <div
-              className={`active AkayaKanadaka_font ${
+              className={`${
                 router.asPath === "/About" && "Allura_font text-[#1D8346]"
               } `}
             >
               <span>About</span>
             </div>
           </Link>
-         
-          <div className="AkayaKanadaka_font flex md:gap-24 gap-8 cursor-pointer">
-          <Link href="/Contact">
+                
+          <Link  className="AkayaKanadaka_font" href="/Contact">
             <div
-              className={`active ${
+              className={`${
                 router.asPath === "/Contact" && "Allura_font text-[#1D8346]"
               } `}
             >
               <span>Contact</span>
             </div>
           </Link>
-            </div>
+      
           </ul>
         </div>
       </div>
