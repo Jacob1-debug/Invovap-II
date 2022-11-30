@@ -91,13 +91,13 @@ function MyApp({ Component, pageProps, props }) {
                       <li
                         className="flex gap-2 cursor-pointer"
                         onClick={() => {
-                          setChangeBg(false) && { handleNormal };
+                          setChangeBg(false);
                         }}
                       >
                         <span className="flex my-auto">
                           <img className="w-4 h-4" src="/images/reset.svg" />
                         </span>
-                        <p onClick={handleNormal}>Reset</p>
+                        <p className="w-full" onClick={handleNormal}>Reset</p>
                       </li>
                     </ul>
                   </div>
