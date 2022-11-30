@@ -3,7 +3,7 @@ import React from "react";
 function OpinionPolls() {
   return (
     <div className=" xl:mt-12 right-0 lg:mt-4 mt-12 fixed ">
-      <div className="h-20 rounded-full bg-[#D9D9D9] xl:w-[316px] lg:w-[220px] w-[190px]  flex xl:px-8 px-4 mx-auto">
+      <div className="py-2 rounded-full bg-[#D9D9D9] xl:w-[316px] lg:w-[220px] w-[190px]  flex xl:px-8 px-4 mx-auto">
         <div className="flex justify-between">
           <div className="flex my-auto">
             <img src="/images/alert-triangle.svg" />

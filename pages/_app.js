@@ -10,12 +10,29 @@ import { useState } from "react";
 function MyApp({ Component, pageProps, props }) {
   const [Sidebar, setSidebar] = useState(false);
   const [ChangeBg, setChangeBg] = useState(false);
-  const [IncreaseText, setIncreaseText] = useState(false);
+
   const [showAlert, setShowAlert] = useState(false);
+
+  const handleIncrease = () => {
+    document
+      .querySelector("html")
+      .setAttribute("style", "font-size:120% !important;");
+  };
+  const handleDecrease = () => {
+    document
+      .querySelector("html")
+      .setAttribute("style", "font-size:90% !important;");
+  };
+  const handleNormal = () => {
+    document
+      .querySelector("html")
+      .setAttribute("style", "font-size:100% !important;");
+  };
+
   return (
     <div
       className={`  ${ChangeBg == false ? "bg-[#F5F5F5]" : "bg-[#CBEDEA] "}
-      } || ${IncreaseText == true ? "font-extrabold" : "font-thin"} `}
+      } || `}
     >
       <Script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></Script>
       <Header />
@@ -41,9 +58,7 @@ function MyApp({ Component, pageProps, props }) {
                     <ul className="flex flex-col gap-4">
                       <li
                         className="flex gap-2 cursor-pointer"
-                        onClick={() => {
-                          setIncreaseText(true);
-                        }}
+                        onClick={handleIncrease}
                       >
                         <span className="flex my-auto">
                           <img className="w-4 h-4" src="/images/increase.png" />
@@ -52,9 +67,7 @@ function MyApp({ Component, pageProps, props }) {
                       </li>
                       <li
                         className="flex gap-2 cursor-pointer"
-                        onClick={() => {
-                          setIncreaseText(false);
-                        }}
+                        onClick={handleDecrease}
                       >
                         <span className="flex my-auto">
                           <img className="w-4 h-4" src="/images/decrease.png" />
@@ -78,20 +91,20 @@ function MyApp({ Component, pageProps, props }) {
                       <li
                         className="flex gap-2 cursor-pointer"
                         onClick={() => {
-                          setChangeBg(false), setIncreaseText(false);
+                          setChangeBg(false) && { handleNormal };
                         }}
                       >
                         <span className="flex my-auto">
                           <img className="w-4 h-4" src="/images/reset.svg" />
                         </span>
-                        Reset
+                        <p onClick={handleNormal}>Reset</p>
                       </li>
                     </ul>
                   </div>
                 )}
               </div>
               <img
-                className="bg-white p-4 lg:w-[120px] md:h-[120px] h-[100px] mt-0 cursor-pointer md:opacity-100 bg-opacity-50  "
+                className="bg-white p-4 lg:w-[120px] md:h-[120px] h-[100px] mt-0 cursor-pointer  md:opacity-100   "
                 src="/images/wheelchair.svg"
               />
             </div>
