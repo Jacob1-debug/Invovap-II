@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, props }) {
   const handleDecrease = () => {
     document
       .querySelector("html")
-      .setAttribute("style", "font-size:90% !important;");
+      .setAttribute("style", "font-size:85% !important;");
   };
   const handleNormal = () => {
     document
