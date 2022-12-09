@@ -1,6 +1,8 @@
+import { useTranslation } from "next-i18next";
 import React from "react";
 
 function OpinionPolls() {
+  const {t}=useTranslation();
   return (
     <div className=" right-0 lg:mt-4 mt-12 fixed ">
       <div className="py-2 rounded-full bg-[#D9D9D9] xl:w-[316px] lg:w-[220px] w-[190px]  flex xl:px-8 px-4 mx-auto">
@@ -9,7 +11,7 @@ function OpinionPolls() {
             <img src="/images/alert-triangle.svg" />
           </div>
           <h2 className="flex my-auto w-[80%] lg:text-base text-sm">
-            Opinion Polls are Open! Please go to the vote tab to vote!
+           {t("common:opinion-text")}
           </h2>
         </div>
       </div>

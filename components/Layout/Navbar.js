@@ -1,8 +1,16 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 function Navbar() {
+  const [langauge ,setLanguage]=useState(false);
   const router = useRouter();
+  
+  const { t } = useTranslation();
+  const { locales, locale: activeLocale } = router;
+  const otherLocales = locales?.filter(
+    (locale) => locale !== activeLocale && locale !== "default"
+  );
   return (
     <div className=" bg-[#1A1A1A] text-white AbrilFatface_font text-sm">
       <ul className="md:flex justify-around md:h-[32px] h-[60px]">
@@ -14,7 +22,7 @@ function Navbar() {
                 router.asPath === "/" && "text-[red] AllertaStencil_font"
               } `}
             >
-              <span>HOME</span>
+              <span>{t("navbar:HOME")}</span>
             </div>
           </Link>
           <Link href="/Candidate">
@@ -23,7 +31,7 @@ function Navbar() {
                 router.asPath === "/Candidate" && "text-[red] AllertaStencil_font"
               } `}
             >
-              <span>CANDIDATE</span>
+              <span>{t("navbar:CANDIDATE")}</span>
             </div>
           </Link>
         </div>
@@ -34,7 +42,7 @@ function Navbar() {
                 router.asPath === "/Interactive" && "text-[red] AllertaStencil_font"
               } `}
             >
-              <span>INTERACTIVE</span>
+              <span>{t("navbar:INTERACTIVE")}</span>
             </div>
           </Link>
           <Link href="/About">
@@ -43,7 +51,7 @@ function Navbar() {
                 router.asPath === "/About" && "text-[red] AllertaStencil_font"
               } `}
             >
-              <span>ABOUT</span>
+              <span>{t("navbar:ABOUT")}</span>
             </div>
           </Link>
           <Link href="/Blog">
@@ -52,19 +60,37 @@ function Navbar() {
                 router.asPath === "/Blog" && "text-[red] AllertaStencil_font"
               } `}
             >
-              <span>BLOG</span>
+              <span>{t("navbar:BLOG")}</span>
             </div>
           </Link>
-          <li className="bg-[#010101] rounded-full p-0.5 px-1 font-sans font-semibold">
-            EN
+
+          {otherLocales?.map((locale) => {
+                const { pathname, query, asPath } = router;
+                return (
+                  <span key={"locale-" + locale}>
+                    <Link
+                      href={{ pathname, query }}
+                      as={asPath}
+                      locale={locale}
+                    >
+                      <li className="bg-[#010101] rounded-full p-0.5 px-1 font-sans font-semibold cursor-pointer" onClick={()=>{
+            setLanguage(!langauge)
+          }}>
+            {langauge ==false ? "EN" :"SW"}
+          
           </li>
+                    </Link>
+                  </span>
+                );
+              })}
+         
           <Link href="/Login">
             <div
               className={`active ${
                 router.asPath === "/Login" && "text-[red] AllertaStencil_font"
               } `}
             >
-              <span>LOGIN</span>
+              <span>{t("navbar:LOGIN")}</span>
             </div>
           </Link>
         </div>

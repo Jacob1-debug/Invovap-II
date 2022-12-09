@@ -2,17 +2,30 @@ import "../styles/globals.css";
 import Script from "next/script";
 import Header from "../components/Layout/Header";
 import OpinionPolls from "../components/Sidebar/OpinionPolls";
-import ElectoralLaw from "../components/Sidebar/ElectoralLaw";
+import { useTranslation } from "next-i18next";
+import { appWithTranslation } from 'next-i18next'
+
 import Login from "../pages/Login";
 import Footer from "../components/Layout/Footer";
 import { useState } from "react";
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common","navbar","footer"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 
 function MyApp({ Component, pageProps, props }) {
+ const { t } = useTranslation();
   const [Sidebar, setSidebar] = useState(false);
   const [ChangeBg, setChangeBg] = useState(false);
 
   const [showAlert, setShowAlert] = useState(false);
+  
+ 
 
   const handleIncrease = () => {
     document
@@ -60,7 +73,7 @@ function MyApp({ Component, pageProps, props }) {
               <div className="bg-white">
                 {Sidebar == false ? null : (
                   <div className="p-2">
-                    <h2 className="text-[30px] mb-6">Accessibility</h2>
+                    <h2 className="text-[30px] mb-6">{t("common:Accessibility")}</h2>
                     <ul className="flex flex-col gap-4">
                       <li
                         className="flex gap-2 cursor-pointer"
@@ -69,7 +82,8 @@ function MyApp({ Component, pageProps, props }) {
                         <span className="flex my-auto">
                           <img className="w-4 h-4" src="/images/increase.png" />
                         </span>
-                        Increase Text
+                        {t("common:Increase-Text")}
+                        
                       </li>
                       <li
                         className="flex gap-2 cursor-pointer"
@@ -78,7 +92,8 @@ function MyApp({ Component, pageProps, props }) {
                         <span className="flex my-auto">
                           <img className="w-4 h-4" src="/images/decrease.png" />
                         </span>
-                        Decrease Text
+                        {t("common:Decrease-Text")}
+                      
                       </li>
                       <li
                         className="flex gap-2 cursor-pointer"
@@ -92,7 +107,8 @@ function MyApp({ Component, pageProps, props }) {
                             src="/images/grayscale.png"
                           />
                         </span>
-                        grayscale
+                        {t("common:grayscale")}
+                        
                       </li>
                       <li
                         className="flex gap-2 cursor-pointer"
@@ -103,7 +119,7 @@ function MyApp({ Component, pageProps, props }) {
                         <span className="flex my-auto">
                           <img className="w-4 h-4" src="/images/reset.svg" />
                         </span>
-                        <p className="w-full" onClick={handleNormal}>Reset</p>
+                        <p className="w-full" onClick={handleNormal}>{t("common:Reset")}</p>
                       </li>
                     </ul>
                   </div>
@@ -115,8 +131,8 @@ function MyApp({ Component, pageProps, props }) {
               />
             </div>
           </div>
-          <h2 className="AllertaStencil_font xl:text-[32px] lg:text-[24px] my-8 underline fixed mt-36 md:block hidden">
-            Electoral Law
+          <h2 className="AllertaStencil_font xl:text-[30px] lg:text-[24px] xl:w-full md:w-56 my-8 underline fixed mt-36 md:block hidden">
+           {t("common:Electoral-Law")}
           </h2>
         </div>
         <div className="md:w-[60%] w-[100%] md:mx-0 mx-2 ">
@@ -156,4 +172,4 @@ function MyApp({ Component, pageProps, props }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

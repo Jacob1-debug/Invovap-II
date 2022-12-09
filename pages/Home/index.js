@@ -2,6 +2,7 @@ import React from "react";
 import GetInTouch from "../../components/Home/GetInTouch";
 import ResultSection from "../../components/Home/ResultSection";
 import { TypeAnimation } from 'react-type-animation';
+<<<<<<< HEAD
 // import Head from 'next/head';
 // import { makeStyles } from '@material-ui/core/styles';
 // import HighContrast from '@material-ui/icons/HighContrast';
@@ -29,6 +30,12 @@ function index() {
   //   marginTop: theme.spacing(2),
   //   },
   //   }));
+=======
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+function Home() {
+  const {t}=useTranslation();
+>>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
   return (
     
     <div className="xl:mx-16 lg:mx-12">
@@ -52,10 +59,10 @@ function index() {
       </h2>
       <div className="Actor_font flex flex-col gap-8 md:text-2xl text-xl text-justify">
         <p>
-          The Info-Vak is a model of a web app that caters for people who have been left out in the society
-          especially in the sector of information, technology , voting.{" "}
+          {t("Home:firstParagraph")}
         </p>
         <p>
+<<<<<<< HEAD
         Voting is an essential part of democracy, and it’s important for everyone to have a chance to make their voice heard.
          Unfortunately, too often people with disabilities are left out of the voting process. This is especially true in Kenya,
           where the percentage of adults with disabilities who have ever voted is just 21%. 
@@ -73,6 +80,18 @@ font sizes and magnified content for those who may have trouble seeing small tex
 By creating an accessible and inclusive voting app, we are helping to ensure that no one is excluded from having
  a say in the future of their nation. By making sure that everyone feels included and can cast their vote, we are helping to create a better and more equitable society. We encourage everyone in Kenya to make their voice heard by participating in this important democratic process.
  </p>
+=======
+
+        {t("Home:secondParagraph")}
+        </p>
+        {/* <p>
+          A stone hand-picked from the river Thames and brought to Flat 8. Fresh
+          handmade pizzas can be made on this stone provided the oven
+          temperature can be regulated. Note: stones do not catch fire (unlike
+          cardboard takeout boxes housing fish and chips and/or electric kettles
+          turned on by placing them on stoves).
+        </p> */}
+>>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
       </div>
       <ResultSection/>
       <GetInTouch/>
@@ -80,4 +99,13 @@ By creating an accessible and inclusive voting app, we are helping to ensure tha
   );
 }
 
-export default index;
+export default Home;
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common","Home","footer","header"])),
+      // Will be passed to the page component as props
+    },
+  };
+}

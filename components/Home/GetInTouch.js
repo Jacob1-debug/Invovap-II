@@ -1,12 +1,14 @@
+import { useTranslation } from "next-i18next";
 import React from "react";
 
 function GetInTouch() {
+  const {t}=useTranslation();
   return (
     <>
       <div className="lg:flex gap-6 justify-center">
         <div className="lg:w-2/6 w-full">
           <p className="text-[42px] Allura_font mx-4 lg:text-left text-center">
-            Get In Touch With Us
+           {t("Home:Get-In-Touch")}
           </p>
           <img
             className="lg:block hidden lg:my-0 my-4"
@@ -19,7 +21,7 @@ function GetInTouch() {
               <input
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
-                placeholder="Name"
+                placeholder={t("Home:form-name")}
                 aria-label="Full name"
               />
             </div>
@@ -27,7 +29,7 @@ function GetInTouch() {
               <input
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
-                placeholder="Email"
+                placeholder={(t("Home:form-email"))}
                 aria-label="Full name"
               />
             </div>
@@ -35,7 +37,7 @@ function GetInTouch() {
               <textarea
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 pb-6 px-2 leading-tight focus:outline-none"
                 type="text"
-                placeholder="Message"
+                placeholder={(t("Home:form-message"))}
                 aria-label="Full name"
               />
             </div>
@@ -43,7 +45,7 @@ function GetInTouch() {
               className=" my-6 mb-4 flex md:mx-0 mx-auto justify-center items-center w-[139px] h-[54px] bg-[#1D8346]  rounded-lg Cabin_font text-white"
               type="button"
             >
-              SEND
+             {t("Home:form-send-btn")}
             </button>
           </form>
         </div>

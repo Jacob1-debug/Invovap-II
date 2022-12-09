@@ -1,7 +1,9 @@
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 function LoginForm() {
+  const {t}=useTranslation();
   const [showAll, setShowAll] = useState(false);
   const [selectValue, setSelectValue] = useState("DISTRICT");
   const dropdown = [
@@ -24,7 +26,7 @@ function LoginForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-date"
             >
-              DATE OF BIRTH
+             {t("login:date-text")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -42,7 +44,7 @@ function LoginForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-contact"
             >
-              CONTACT
+              {t("login:contact-text")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -59,7 +61,7 @@ function LoginForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-password"
             >
-              DISTRICT OF VOTE REGISTRATION
+             {t("login:district-text")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -110,7 +112,7 @@ function LoginForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="Vote"
             >
-              PASSWORD
+             {t("login:password-text")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -130,9 +132,9 @@ function LoginForm() {
               AkayaKanadaka_font text-[26px]"
               type="button"
             >
-              Log In
+             {t("login:login-btn")}
             </button>
-            <p className=" text-[20px] md:my-12 my-8"> Or Don’t have an account, <Link className="text-[#30429F]" href="/Register">Sign UP</Link></p>
+            <p className=" text-[20px] md:my-12 my-8"> {t("login:Signup-text")} <Link className="text-[#30429F]" href="/Register">{t("login:signup-text1")}</Link></p>
           </div>
         </div>
       </form>
