@@ -1,6 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { SocialIcon } from 'react-social-icons'; 
+
 function Footer() {
   const router = useRouter();
   return (
@@ -54,10 +56,15 @@ function Footer() {
 
         <div className="flex md:gap-10 justify-between md:mt-0 m-6">
           <p className="AkayaKanadaka_font flex my-auto"> FOLLOW US</p>
-          <img className="w-8" src="/images/googleDrive.svg" />
+          {/* <img className="w-8" src="/images/googleDrive.svg" />
           <img className="w-8" src="/images/Instagram.svg" />
           <img className="w-8" src="/images/Instagram.svg" />
-          <img className="w-8" src="/images/Facebook.svg" />
+          <img className="w-8" src="/images/Facebook.svg" /> */}
+          <SocialIcon url="https://twitter.com/jaketrent" />
+          <SocialIcon url="https://facebook.com/jaketrent" />
+          <SocialIcon url="https://instagram.com/jaketrent" />
+          <SocialIcon url="https://medium.com/jaketrent" />
+
         </div>
       </div>
     </div>

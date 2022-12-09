@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Footer from "../components/Layout/Footer";
 import { useState } from "react";
 
+
 function MyApp({ Component, pageProps, props }) {
   const [Sidebar, setSidebar] = useState(false);
   const [ChangeBg, setChangeBg] = useState(false);
@@ -16,14 +17,19 @@ function MyApp({ Component, pageProps, props }) {
   const handleIncrease = () => {
     document
       .querySelector("html")
-      .setAttribute("style", "font-size:120% !important;");
+      .setAttribute("style", "font-size:140% !important;");
   };
   const handleDecrease = () => {
     document
       .querySelector("html")
-      .setAttribute("style", "font-size:85% !important;");
+      .setAttribute("style", "font-size:55% !important;");
   };
   const handleNormal = () => {
+    document
+      .querySelector("html")
+      .setAttribute("style", "font-size:100% !important;");
+  };
+  const textToSpeach = () => {
     document
       .querySelector("html")
       .setAttribute("style", "font-size:100% !important;");
