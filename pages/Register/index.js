@@ -1,6 +1,7 @@
 import AccountSidebar from "../../components/Login/AccountSidebar";
 import RegisterForm from "../../components/Register/RegisterForm";
-function index() { 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+function Register() {;
   return (
     <>
       <div className="md:flex justify-between w-full md:my-16 my-8">
@@ -15,4 +16,14 @@ function index() {
   );
 }
 
-export default index;
+export default Register;
+
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common","Header","footer","login","register","navbar"])),
+      // Will be passed to the page component as props
+    },
+  };
+}

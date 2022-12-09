@@ -1,7 +1,9 @@
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 function RegisterForm() {
+  const {t}=useTranslation();
   const [showAll, setShowAll] = useState(false);
   const [selectValue, setSelectValue] = useState("DISTRICT");
   const dropdown = [
@@ -24,7 +26,7 @@ function RegisterForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-Name"
             >
-              NAME
+             {t("register:name")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -41,7 +43,7 @@ function RegisterForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-date"
             >
-              GENDER
+             {t("register:gender")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -58,7 +60,7 @@ function RegisterForm() {
                   className="form-check-label inline-block "
                   for="inlineRadio10"
                 >
-                  Male
+                  {t("register:male")}
                 </label>
               </div>
               <div className="form-check form-check-inline">
@@ -73,7 +75,7 @@ function RegisterForm() {
                   className="form-check-label inline-block "
                   for="inlineRadio20"
                 >
-                  Female
+                {t("register:female")}
                 </label>
               </div>
               <div className="form-check form-check-inline">
@@ -88,7 +90,7 @@ function RegisterForm() {
                   className="form-check-label inline-block "
                   for="inlineRadio30"
                 >
-                  Other
+                  {t("register:other")}
                 </label>
               </div>
             </div>
@@ -100,7 +102,7 @@ function RegisterForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-date"
             >
-              DATE OF BIRTH
+            {t("register:date-of-birth")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -111,65 +113,7 @@ function RegisterForm() {
             />
           </div>
         </div>
-        <div className="md:flex md:items-center mb-6">
-          <div className="md:w-1/3">
-            <label
-              className="AbrilFatface_font text-[#676767] lg:text-[18px]"
-              for="inline-date"
-            >
-              GENDER
-            </label>
-          </div>
-          <div className="md:w-2/3 Actor_font">
-            <div className="flex ">
-              <div className="form-check form-check-inline">
-                <input
-                  className=" form-check-input appearance-none mt-1 rounded-full h-4 w-4 border border-black bg-white checked:bg-blue-600  bg-center bg-contain float-left mr-2 cursor-pointer"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="option1"
-                />
-                <label
-                  className="form-check-label inline-block "
-                  for="inlineRadio10"
-                >
-                  Male
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className=" form-check-input appearance-none mt-1 rounded-full h-4 w-4 border border-black bg-white checked:bg-blue-600  bg-center bg-contain float-left mr-2 cursor-pointer"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="option2"
-                />
-                <label
-                  className="form-check-label inline-block "
-                  for="inlineRadio20"
-                >
-                  Female
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input  mt-1 appearance-none rounded-full h-4 w-4 border border-black bg-white  align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio3"
-                  value="option3"
-                />
-                <label
-                  className="form-check-label inline-block "
-                  for="inlineRadio30"
-                >
-                  Other
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
+   
 
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
@@ -177,7 +121,7 @@ function RegisterForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-contact"
             >
-              EMAIL
+             {t("register:email")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -194,7 +138,7 @@ function RegisterForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-contact"
             >
-              CONTACT
+              {t("register:contact")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -211,7 +155,7 @@ function RegisterForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="inline-password"
             >
-              DISTRICT OF VOTE REGISTRATION
+              {t("register:district")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -262,7 +206,7 @@ function RegisterForm() {
               className="AbrilFatface_font text-[#676767] lg:text-[18px]"
               for="Vote"
             >
-              PASSWORD
+             {t("register:password")}
             </label>
           </div>
           <div className="md:w-2/3 Actor_font">
@@ -282,13 +226,12 @@ function RegisterForm() {
               AkayaKanadaka_font text-[26px]"
               type="button"
             >
-              Register Now
+              {t("register:register-btn")}
             </button>
             <p className="md:my-12 my-8 text-[20px] md:text-left text-center">
-              {" "}
-              Or have an account{" "}
+            {t("register:signIn-text")}
               <Link className="text-[#30429F]" href="/Login">
-                Sign IN
+              {t("register:signIn-link")}
               </Link>
             </p>
           </div>

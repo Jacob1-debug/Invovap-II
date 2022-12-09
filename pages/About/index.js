@@ -1,15 +1,17 @@
 import React from "react";
-
-function index() {
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+function About() {
+  const { t } = useTranslation();
   return (
     <div className="mt-16">
       <h2 className="text-center AllertaStencil_font md:text-[28px] text-[24px]">
-        Welcome to Our About page
+       {t("About:Heading")}
       </h2>
       <div className="md:flex xl:gap-24 lg:gap-8 gap-4 justify-center md:m-4">
         <div className=" bg-[#F7FAFD] lg:p-6 p-4 py-10 xl:w-[365px] lg:w-[300px]">
           <img
-            width={200}
+            width={220}
             className="flex mx-auto"
             src="/images/About_img1.svg"
           />
@@ -17,12 +19,10 @@ function index() {
             className="lg:text-[20px] text-[18px] my-3 text-center py-2 
 AllertaStencil_font"
           >
-            Make everyone feel included
+           {t("About:cardHeading1")}
           </p>
           <p className="Actor_font lg:text-[24px] text-[20px] text-[#838383]">
-            This I choose to do. If there is a price, this I choose to pay. If
-            it is my death, then I choose to die. Where this takes me, there I
-            choose to go. I choose. This I choose to do
+           {t("About:cardText2")}
           </p>
         </div>
         <div className=" bg-[#F7FAFD] p-6 py-10 xl:w-[365px] lg:w-[300px] ">
@@ -35,12 +35,10 @@ AllertaStencil_font"
             className="lg:text-[20px] my-4 text-[18px] text-center 
 AllertaStencil_font"
           >
-            We advice Voters on what to expect in polling stations
+           {t("About:cardHeading")}
           </p>
           <p className="Actor_font lg:text-[24px] text-[20px] text-[#838383]">
-            This I choose to do. If there is a price, this I choose to pay. If
-            it is my death, then I choose to die. Where this takes me, there I
-            choose to go. I choose. This I choose to do
+           {t("About:cardText")}
           </p>
         </div>
       </div>
@@ -48,4 +46,12 @@ AllertaStencil_font"
   );
 }
 
-export default index;
+export default About;
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common","Header","About","footer","navbar"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
