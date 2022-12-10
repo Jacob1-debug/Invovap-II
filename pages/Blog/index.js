@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-// import React from 'react'
-
-function index() {
-=======
 import React from 'react'
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 function Blog() {
   const { t } = useTranslation();
->>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
   return (
     <>
  <div className="xl:mx-16 lg:mx-8">

@@ -1,37 +1,12 @@
 import { useTranslation } from 'next-i18next'
 import React from 'react'
-<<<<<<< HEAD
-import ElectoralLaw from '../Sidebar/ElectoralLaw'
-import Link from 'next/link'
-function AccountSidebar() {
-  
-
-  return (
-    <div className='flex flex-col md:gap-44 gap-8'>
-      {/* <Link className="Cabin_font text-xl" href="/constitution">
-            
-          
-            <p className="mt-8 text-[#1D8346]  underline">
-          {" "}
-          Get the Case Study
-        </p>
-         
-        </Link> */}
-      <Link href="/constitution">
-      <div className=" ">
-          <ElectoralLaw />
-=======
 
 function AccountSidebar() {
   const {t}=useTranslation();
   return (
     <div className='flex flex-col md:gap-44 gap-8'>
-          <div className="  ">
           
->>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
-          </div>
-          </Link>
-
+         
           
           
           <div className="mx-8">

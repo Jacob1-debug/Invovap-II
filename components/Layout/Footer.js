@@ -1,12 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-<<<<<<< HEAD
-import { SocialIcon } from 'react-social-icons'; 
-
-=======
 import { useTranslation } from "next-i18next";
->>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
 function Footer() {
   const router = useRouter();
   const {t}=useTranslation();
@@ -60,20 +55,15 @@ function Footer() {
         </h2>
 
         <div className="flex md:gap-10 justify-between md:mt-0 m-6">
-<<<<<<< HEAD
-          <p className="AkayaKanadaka_font flex my-auto"> FOLLOW US</p>
-          {/* <img className="w-8" src="/images/googleDrive.svg" />
-=======
           <p className="AkayaKanadaka_font flex my-auto">{t("footer:follow-us")}</p>
           <img className="w-8" src="/images/googleDrive.svg" />
->>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
           <img className="w-8" src="/images/Instagram.svg" />
           <img className="w-8" src="/images/Instagram.svg" />
-          <img className="w-8" src="/images/Facebook.svg" /> */}
-          <SocialIcon url="https://twitter.com/jaketrent" />
+          <img className="w-8" src="/images/Facebook.svg" /> 
+          {/* <SocialIcon url="https://twitter.com/jaketrent" />
           <SocialIcon url="https://facebook.com/jaketrent" />
           <SocialIcon url="https://instagram.com/jaketrent" />
-          <SocialIcon url="https://medium.com/jaketrent" />
+          <SocialIcon url="https://medium.com/jaketrent" /> */}
 
         </div>
       </div>

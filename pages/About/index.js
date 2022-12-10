@@ -22,13 +22,7 @@ AllertaStencil_font"
            {t("About:cardHeading1")}
           </p>
           <p className="Actor_font lg:text-[24px] text-[20px] text-[#838383]">
-<<<<<<< HEAD
-          We understand that access to voting should not be hindered by any factor, including disability. 
- That’s why we’ve designed our app to be accessible and user-friendly for all voters, regardless 
- of their disability or capability level
-=======
            {t("About:cardText2")}
->>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
           </p>
         </div>
         <div className=" bg-[#F7FAFD] p-6 py-10 xl:w-[365px] lg:w-[300px] ">
@@ -44,12 +38,7 @@ AllertaStencil_font"
            {t("About:cardHeading")}
           </p>
           <p className="Actor_font lg:text-[24px] text-[20px] text-[#838383]">
-<<<<<<< HEAD
-            By giving the voters, the entire process of voting, we enable voters of all levels in the society
-            to have a very smooth voting process.
-=======
            {t("About:cardText")}
->>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
           </p>
         </div>
       </div>

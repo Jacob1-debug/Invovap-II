@@ -9,13 +9,8 @@ function Interactive() {
      {t("interactive:Heading")}
       </h2>
       <p className='Actor_font md:text-2xl text-xl md:mx-16 mx-4'>
-<<<<<<< HEAD
-        This page enables to see how the general outlook of the hierachy of power is. 
-         </p>
-=======
         {t("interactive:Text")}
       </p>
->>>>>>> 4f3097d9126be928088337811d3bb6b27bfc676b
 <img className='flex mx-auto my-8' src="/images/interactive.png"/>
     </>
   )
